@@ -1,0 +1,144 @@
+/* v2.0 | 20110126
+  http://meyerweb.com/eric/tools/css/reset/ 
+  License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  /* font: inherit; */
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body, html {
+  font-family: "Montserrat", sans-serif;
+  background-color: #262523;
+}
+
+.inner {
+  width: 1744px;
+  height: 100%;
+  margin: 0px auto;
+  position: relative;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  border: none;
+  z-index: -1;
+}
+
+.header-container {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+}
+.header-container .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-container .inner h1 {
+  width: 168px;
+}
+.header-container .inner h1 > a {
+  width: 100%;
+}
+.header-container .inner h1 > a > img {
+  width: 100%;
+}
+.header-container .inner .menu-wrapper {
+  position: relative;
+}
+.header-container .inner .menu-wrapper .menu-btn {
+  width: 50px;
+  height: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.header-container .inner .menu-wrapper .menu-btn > i {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+.header-container .inner .menu-wrapper .menu-btn.on {
+  gap: 0px;
+}
+.header-container .inner .menu-wrapper .menu-btn.on > i:nth-child(1) {
+  transform: translateY(50%) rotate(45deg);
+}
+.header-container .inner .menu-wrapper .menu-btn.on > i:nth-child(2) {
+  display: none;
+}
+.header-container .inner .menu-wrapper .menu-btn.on > i:nth-child(3) {
+  transform: translateY(-50%) rotate(-45deg);
+}
+.header-container .inner .menu-wrapper .menu-box {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  flex-direction: column;
+  gap: 24px;
+  text-align: right;
+}
+.header-container .inner .menu-wrapper .menu-box > li > a {
+  color: white;
+  font-size: 22px;
+}
+.header-container .inner .menu-wrapper .menu-box.on {
+  display: flex;
+}
