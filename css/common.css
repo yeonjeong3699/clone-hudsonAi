@@ -193,6 +193,29 @@ body, html {
   animation-direction: alternate;
   animation-timing-function: ease-in;
 }
+.main-container .video-container {
+  padding-bottom: 300px;
+  box-sizing: border-box;
+}
+.main-container .video-container .video-wrapper {
+  width: 1300px;
+  margin: 0px auto;
+  text-align: right;
+}
+.main-container .video-container .video-wrapper > .text {
+  color: #cecdcd;
+  font-size: 28px;
+  line-height: 1.5;
+  margin: 40px 0px 26px;
+}
+.main-container .video-container .video-wrapper > .text > span {
+  color: white;
+  font-weight: 600;
+}
+.main-container .video-container .video-wrapper > .source {
+  color: #878787;
+  font-size: 17px;
+}
 
 @keyframes changeText {
   0% {

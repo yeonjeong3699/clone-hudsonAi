@@ -54,7 +54,36 @@
                 animation-timing-function: ease-in;
             }
         }
-    }
+    }//visual-container
+
+    .video-container{
+        padding-bottom: 300px;
+        box-sizing: border-box;
+
+        .video-wrapper{
+            width: 1300px;
+            margin: 0px auto;
+            text-align: right;
+
+            & > .text{
+                color: #cecdcd;
+                font-size: 28px;
+                line-height: 1.5;
+                margin: 40px 0px 26px;
+
+                & > span{
+                    color: white;
+                    font-weight: 600;
+                }
+            }
+
+            & > .source{
+                color: #878787;
+                font-size: 17px;
+            }
+        }
+    }//video-container
+
 }
 
 @keyframes changeText{
