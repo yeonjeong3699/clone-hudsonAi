@@ -142,3 +142,91 @@ body, html {
 .header-container .inner .menu-wrapper .menu-box.on {
   display: flex;
 }
+
+.main-container .visual-container {
+  padding: 110px 0px 230px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.main-container .visual-container .visual-box {
+  display: flex;
+  align-items: center;
+}
+.main-container .visual-container .visual-box .change-box > span, .main-container .visual-container .visual-box > span {
+  font-weight: 800;
+  font-size: 147px;
+  color: white;
+}
+.main-container .visual-container .visual-box .change-box {
+  position: relative;
+}
+.main-container .visual-container .visual-box .change-box .change-text {
+  animation-name: changeText;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+.main-container .visual-container .visual-box .change-box .change-img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-name: changeImg;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+.main-container .visual-container .visual-box .change-o {
+  width: 54px;
+  height: 54px;
+  border: solid 28px white;
+  border-radius: 100px;
+  animation-name: changeO;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+@keyframes changeText {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes changeImg {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes changeO {
+  0% {
+    width: 54px;
+    border-color: white;
+  }
+  50% {
+    width: 160px;
+    border-color: #ff5c29;
+  }
+  100% {
+    width: 160px;
+    border-color: #ff5c29;
+  }
+}
