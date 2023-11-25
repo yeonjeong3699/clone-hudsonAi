@@ -59,6 +59,7 @@ a {
 body, html {
   font-family: "Montserrat", sans-serif;
   background-color: #262523;
+  height: 7000px;
 }
 
 .inner {
@@ -194,8 +195,11 @@ body, html {
   animation-timing-function: ease-in;
 }
 .main-container .video-container {
-  padding-bottom: 300px;
+  padding-bottom: 280px;
   box-sizing: border-box;
+  padding-top: 100px;
+  opacity: 0;
+  transition: 0.5s;
 }
 .main-container .video-container .video-wrapper {
   width: 1300px;
@@ -215,6 +219,69 @@ body, html {
 .main-container .video-container .video-wrapper > .source {
   color: #878787;
   font-size: 17px;
+}
+.main-container .seenchro-container {
+  padding-bottom: 200px;
+  box-sizing: border-box;
+  padding-top: 100px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.main-container .seenchro-container .text-top {
+  text-align: center;
+  margin-bottom: 220px;
+}
+.main-container .seenchro-container .text-top > p {
+  font-size: 45px;
+  color: white;
+}
+.main-container .seenchro-container .text-top .bold {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.main-container .seenchro-container .img-wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.main-container .seenchro-container .img-wrapper .seenchro-white-box {
+  width: 100%;
+  height: 600px;
+}
+.main-container .seenchro-container .img-wrapper .seenchro-white-box .seenchro-white {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250%;
+  transition: 0.5s;
+}
+.main-container .seenchro-container .img-wrapper .seenchro-line-box {
+  width: 100%;
+  text-align: center;
+  margin-top: 1984px;
+}
+.main-container .seenchro-container .img-wrapper .seenchro-line-box .seenchro-line {
+  width: 52%;
+  margin-bottom: 50px;
+  transition: 0.5s;
+  opacity: 0;
+}
+.main-container .seenchro-container .img-wrapper .seenchro-line-box .text-bottom {
+  opacity: 0;
+  transform: scale(0);
+  margin-top: 370px;
+  transition: 0.5s;
+}
+.main-container .seenchro-container .img-wrapper .seenchro-line-box .text-bottom > p {
+  font-size: 35px;
+  color: white;
+  line-height: 1.2;
+}
+.main-container .seenchro-container .img-wrapper .seenchro-line-box .text-bottom .bold {
+  font-size: 46px;
+  font-weight: 500;
+  margin-bottom: 24px;
 }
 
 @keyframes changeText {

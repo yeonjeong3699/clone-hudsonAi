@@ -57,8 +57,11 @@
     }//visual-container
 
     .video-container{
-        padding-bottom: 300px;
+        padding-bottom: 280px;
         box-sizing: border-box;
+        padding-top: 100px;
+        opacity: 0;
+        transition: 0.5s;
 
         .video-wrapper{
             width: 1300px;
@@ -84,8 +87,84 @@
         }
     }//video-container
 
+    .seenchro-container{
+        padding-bottom: 200px;
+        box-sizing: border-box;
+        padding-top: 100px;
+        opacity: 0;
+        transition: 0.5s;
+
+        .text-top{
+            text-align: center;
+            margin-bottom: 220px;
+
+            & > p{
+                font-size: 45px;
+                color: white;
+            }
+
+            .bold{
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+        }
+
+        .img-wrapper{
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+
+            .seenchro-white-box{
+                width: 100%;
+                height: 600px;
+
+                .seenchro-white{
+                    position: absolute;
+                    top: 0px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 250%;
+                    transition: 0.5s;
+                }
+            }
+
+            .seenchro-line-box{
+                width: 100%;
+                text-align: center;
+                margin-top: 1984px;
+
+                .seenchro-line{
+                    width: 52%;
+                    margin-bottom: 50px;
+                    transition: 0.5s;
+                    opacity: 0
+                }
+
+                .text-bottom{
+                    opacity: 0;
+                    transform: scale(0);
+                    margin-top: 370px;
+                    transition: 0.5s;
+
+                    & > p{
+                        font-size: 35px;
+                        color: white;
+                        line-height: 1.2;
+                    }
+        
+                    .bold{
+                        font-size: 46px;
+                        font-weight: 500;
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+        }
+    }//seenchro-container
 }
 
+
+//keyframes
 @keyframes changeText{
     0%{
         opacity: 1;
