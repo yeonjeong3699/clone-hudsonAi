@@ -84,13 +84,11 @@ window.addEventListener('scroll', function () {
     }
 
     if (scrollY <= 3399) {
-        seenchroLineBox.style.position = '';
-        seenchroLineBox.style.top = '';
-        seenchroLineBox.style.marginTop = '';
         seenchroLine.style.opacity = '';
     }
 
     if (scrollY >= 3500) {
+        seenchroWhiteBox.style.position = '';
         seenchroLine.style.opacity = '0.35';
     }
 
@@ -110,6 +108,12 @@ window.addEventListener('scroll', function () {
         textBottom.style.opacity = '0.5';
         textBottom.style.transform = 'scale(0.8)';
         textBottom.style.marginTop = '270px';
+    }
+
+    if (scrollY <= 3899) {
+        textBottom.style.opacity = '';
+        textBottom.style.transform = '';
+        textBottom.style.marginTop = '';
     }
 
     if (scrollY >= 4000) {
