@@ -8,6 +8,11 @@ window.addEventListener('scroll', function () {
     const seenchroLineBox = document.querySelector('.seenchro-line-box');
     const seenchroLine = document.querySelector('.seenchro-line');
     const textBottom = document.querySelector('.text-bottom');
+    const contentWrapper = document.querySelector('.content-wrapper');
+    const content01 = document.querySelector('.content01');
+    const content02 = document.querySelector('.content02');
+    const content03 = document.querySelector('.content03');
+
 
     console.log(scrollY);
 
@@ -135,7 +140,133 @@ window.addEventListener('scroll', function () {
     }
 
     if (scrollY >= 4300) {
-        seenchroLineBox.style.position = 'static';
+        seenchroLineBox.style.position = '';
         seenchroLineBox.style.marginTop = '';
     }
+
+    if (scrollY >= 5200) {
+        contentWrapper.style.position = 'fixed';
+        contentWrapper.style.top = '158px';
+        contentWrapper.style.left = '50%';
+        contentWrapper.style.transform = 'translateX(-50%)';
+    }
+
+    if (scrollY <= 5199) {
+        contentWrapper.style.position = '';
+        contentWrapper.style.top = '';
+        contentWrapper.style.left = '';
+        contentWrapper.style.transform = '';
+    }
+
+    if (scrollY >= 5300) {
+        content01.style.opacity = '0.5';
+    }
+
+    if (scrollY <= 5299) {
+        content01.style.opacity = '';
+    }
+
+    if (scrollY >= 5400) {
+        content01.style.opacity = '0.1';
+    }
+
+    if (scrollY >= 5500) {
+        content01.style.opacity = '0';
+        content02.style.opacity = '0.1';
+    }
+
+    if (scrollY <= 5499) {
+        content02.style.opacity = '0';
+    }
+
+    if (scrollY >= 5600) {
+        content02.style.opacity = '0.5';
+    }
+
+    if (scrollY >= 5700) {
+        content02.style.opacity = '1';
+    }
+
+    if (scrollY >= 6700) {
+        content02.style.opacity = '0.5';
+    }
+
+    if (scrollY >= 6800) {
+        content02.style.opacity = '0.1';
+    }
+
+    if (scrollY >= 6900) {
+        content02.style.opacity = '0';
+        content03.style.opacity = '0.1';
+    }
+
+    if (scrollY <= 6899) {
+        content03.style.opacity = '0';
+    }
+
+    if (scrollY >= 7000) {
+        content03.style.opacity = '0.5';
+    }
+
+    if (scrollY >= 7100) {
+        content03.style.opacity = '1';
+    }
+
+    if (scrollY >= 8100) {
+        content03.style.opacity = '1';
+        contentWrapper.style.position = '';
+        contentWrapper.style.top = '';
+        contentWrapper.style.left = '';
+        contentWrapper.style.transform = '';
+        contentWrapper.style.marginTop = '3262px';
+    }
+
+    if (scrollY <= 8099) {
+        contentWrapper.style.marginTop = '';
+    }
 })
+
+//animation-wrapper
+const hudsonImg01 = document.querySelector('.hudson-img01');
+hudsonImg01.id = 'hudsonImg01';
+
+const hudsonImg01Clone = hudsonImg01.cloneNode(true);
+hudsonImg01Clone.id = 'hudsonImg01Clone';
+
+document.querySelector('.animation-box01').appendChild(hudsonImg01Clone);
+
+document.querySelector('#hudsonImg01').style.left = '0px';
+document.querySelector('#hudsonImg01Clone').style.left = hudsonImg01.offsetWidth + 'px';
+
+hudsonImg01.classList.add('original');
+hudsonImg01Clone.classList.add('clone');
+
+
+const hudsonImg02 = document.querySelector('.hudson-img02');
+hudsonImg02.id = 'hudsonImg02';
+
+const hudsonImg02Clone = hudsonImg02.cloneNode(true);
+hudsonImg02Clone.id = 'hudsonImg02Clone';
+
+document.querySelector('.animation-box02').appendChild(hudsonImg02Clone);
+
+document.querySelector('#hudsonImg02').style.left = '0px';
+document.querySelector('#hudsonImg02Clone').style.left = hudsonImg02.offsetWidth + 'px';
+
+hudsonImg02.classList.add('original');
+hudsonImg02Clone.classList.add('clone');
+
+
+const hudsonImg03 = document.querySelector('.hudson-img03');
+hudsonImg03.id = 'hudsonImg03';
+
+const hudsonImg03Clone = hudsonImg03.cloneNode(true);
+hudsonImg03Clone.id = 'hudsonImg03Clone';
+
+document.querySelector('.animation-box03').appendChild(hudsonImg03Clone);
+
+document.querySelector('#hudsonImg03').style.left = '0px';
+document.querySelector('#hudsonImg03Clone').style.left = hudsonImg03.offsetWidth + 'px';
+
+hudsonImg03.classList.add('original');
+hudsonImg03Clone.classList.add('clone');
