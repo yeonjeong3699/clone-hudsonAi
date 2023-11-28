@@ -19,6 +19,10 @@ window.addEventListener('scroll', function(){
     if(scrollY <= 9399){
         h1Img.style.filter ='';
         menuBtn.style.filter ='';
+
+        menuBoxList.forEach((item)=>{
+            item.style.filter ='';
+        })
     }
 
     if(scrollY >= 9400){
@@ -28,11 +32,14 @@ window.addEventListener('scroll', function(){
         menuBoxList.forEach((item)=>{
             item.style.filter ='brightness(20%)';
         })
-        
     }
 
     if(scrollY >= 10400){
         h1Img.style.filter ='';
         menuBtn.style.filter ='';
+
+        menuBoxList.forEach((item)=>{
+            item.style.filter ='';
+        })
     }
 })
