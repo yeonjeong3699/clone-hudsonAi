@@ -59,7 +59,6 @@ a {
 body, html {
   font-family: "Montserrat", sans-serif;
   background-color: #262523;
-  height: 20000px;
 }
 
 .inner {
@@ -97,6 +96,7 @@ body, html {
 }
 .header-container .inner h1 > a > img {
   width: 100%;
+  transition: 0.3s;
 }
 .header-container .inner .menu-wrapper {
   position: relative;
@@ -108,6 +108,7 @@ body, html {
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+  transition: 0.3s;
   cursor: pointer;
 }
 .header-container .inner .menu-wrapper .menu-btn > i {
@@ -142,6 +143,48 @@ body, html {
 }
 .header-container .inner .menu-wrapper .menu-box.on {
   display: flex;
+}
+
+.footer-container {
+  border-top: solid 1px rgba(255, 255, 255, 0.5);
+  padding: 60px 0px;
+  box-sizing: border-box;
+}
+.footer-container .inner .footer-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.footer-container .inner .footer-top .office-wrapper {
+  display: flex;
+  gap: 60px;
+}
+.footer-container .inner .footer-top .office-wrapper .office-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-container .inner .footer-top .office-wrapper .office-box > p {
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  margin-bottom: 6px;
+}
+.footer-container .inner .footer-top .office-wrapper .office-box > span {
+  font-size: 16px;
+  color: white;
+}
+.footer-container .inner .footer-top .logo-wrapper {
+  text-align: right;
+}
+.footer-container .inner .footer-top .logo-wrapper > p {
+  font-size: 16px;
+  color: white;
+  margin-top: 30px;
+}
+.footer-container .inner > a {
+  font-size: 16px;
+  color: white;
 }
 
 .main-container .visual-container {
@@ -285,10 +328,11 @@ body, html {
 }
 .main-container .ai-tech-container {
   margin-top: 360px;
+  height: 1122px;
 }
 .main-container .ai-tech-container .content-wrapper {
   width: 100%;
-  height: 510px;
+  height: 100%;
   position: relative;
 }
 .main-container .ai-tech-container .content-wrapper .content-box {
@@ -346,7 +390,7 @@ body, html {
 }
 .main-container .ai-tech-container .content-wrapper .animation-wrapper {
   width: 100%;
-  height: 100%;
+  height: 390px;
   overflow: hidden;
   position: relative;
 }
@@ -420,6 +464,167 @@ body, html {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   transform: translateX(-100%);
+}
+.main-container .intro-container {
+  background-color: white;
+  padding: 170px 0px 130px;
+  box-sizing: border-box;
+}
+.main-container .intro-container .inner .intro-box {
+  display: flex;
+  padding-top: 40px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: 0.5s;
+}
+.main-container .intro-container .inner .intro-box:first-of-type {
+  margin-bottom: 150px;
+}
+.main-container .intro-container .inner .intro-box > .img-box {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .intro-container .inner .intro-box > .img-box .voice {
+  width: 70%;
+  padding-right: 100px;
+}
+.main-container .intro-container .inner .intro-box > .img-box .mouse {
+  width: 40%;
+  padding-right: 50px;
+}
+.main-container .intro-container .inner .intro-box > .text-box {
+  width: 55%;
+}
+.main-container .intro-container .inner .intro-box > .text-box > dt {
+  font-weight: 700;
+  font-size: 35px;
+  color: #262523;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  border: solid 2px #262523;
+  border-radius: 100px;
+  display: inline-block;
+}
+.main-container .intro-container .inner .intro-box > .text-box > dd {
+  font-size: 25px;
+  color: #262523;
+  line-height: 1.5;
+  padding: 15px 25px 25px;
+  box-sizing: border-box;
+  letter-spacing: -0.5px;
+}
+.main-container .email-container {
+  padding: 130px 0px 100px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+.main-container .email-container .inner {
+  display: flex;
+  justify-content: space-between;
+}
+.main-container .email-container .inner .email-title-box {
+  margin-left: 50px;
+  text-align: center;
+  transform: translateX(-30%);
+  opacity: 0;
+  transition: 0.5s;
+}
+.main-container .email-container .inner .email-title-box > .title {
+  font-weight: 700;
+  font-size: 84px;
+  color: white;
+}
+.main-container .email-container .inner .email-title-box > .text {
+  font-weight: 500;
+  font-size: 35px;
+  color: white;
+  margin: 80px 0px 70px;
+  line-height: 1.5;
+}
+.main-container .email-container .inner .email-title-box > a {
+  font-size: 28px;
+  color: #fee250;
+  text-decoration: underline;
+}
+.main-container .email-container .inner .input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(30%);
+  opacity: 0;
+  transition: 0.5s;
+}
+.main-container .email-container .inner .input-container .input-wrapper {
+  width: 1000px;
+  display: flex;
+  gap: 3%;
+  margin-bottom: 50px;
+}
+.main-container .email-container .inner .input-container .input-wrapper .input-box {
+  width: 48.3%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.main-container .email-container .inner .input-container .input-wrapper .input-box > label {
+  font-size: 23px;
+  color: white;
+}
+.main-container .email-container .inner .input-container .input-wrapper .input-box > input {
+  width: 100%;
+  height: 70px;
+  border: none;
+  border-radius: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 23px;
+  text-indent: 20px;
+}
+.main-container .email-container .inner .input-container > textarea {
+  width: 100%;
+  height: 420px;
+  border: none;
+  border-radius: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 23px;
+  text-indent: 20px;
+  padding: 20px 0px;
+  box-sizing: border-box;
+  resize: none;
+}
+.main-container .email-container .inner .input-container > button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  color: white;
+  background: none;
+  border: solid 2px white;
+  border-radius: 50px;
+  padding: 10px 50px;
+  box-sizing: border-box;
+  margin-top: 80px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.main-container .email-container .inner .input-container > button:hover {
+  color: #262523;
+  background-color: white;
+}
+.main-container .email-container .top-btn {
+  position: absolute;
+  right: 55px;
+  bottom: 0px;
+  width: 56px;
+  height: 56px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.main-container .email-container .top-btn > img {
+  width: 70%;
 }
 
 @keyframes changeText {

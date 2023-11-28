@@ -164,10 +164,11 @@
 
     .ai-tech-container{
         margin-top: 360px;
+        height: 1122px;
 
         .content-wrapper{
             width: 100%;
-            height: 510px;
+            height: 100%;
             position: relative;
 
             .content-box{
@@ -236,7 +237,7 @@
 
             .animation-wrapper{
                 width: 100%;
-                height: 100%;
+                height: 390px;
                 overflow: hidden;
                 position: relative;
 
@@ -328,6 +329,193 @@
             }
         }
     }//ai-tech-container
+
+    .intro-container{
+        background-color: white;
+        padding: 170px 0px 130px;
+        box-sizing: border-box;
+
+        .inner{
+            .intro-box{
+                display: flex;
+                padding-top: 40px;
+                box-sizing: border-box;
+                opacity: 0;
+                transition: 0.5s;
+
+                &:first-of-type{
+                    margin-bottom: 150px;
+                }
+
+                & > .img-box{
+                    width: 45%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .voice{
+                        width: 70%;
+                        padding-right: 100px;
+                    }
+
+                    .mouse{
+                        width: 40%;
+                        padding-right: 50px;
+                    }
+                }
+
+                & > .text-box{
+                    width: 55%;
+
+                    & > dt{
+                        font-weight: 700;
+                        font-size: 35px;
+                        color: $black;
+                        padding: 20px 40px;
+                        box-sizing: border-box;
+                        border: solid 2px $black;
+                        border-radius: 100px;
+                        display: inline-block;
+                    }
+
+                    & > dd{
+                        font-size: 25px;
+                        color: $black;
+                        line-height: 1.5;
+                        padding: 15px 25px 25px;
+                        box-sizing: border-box;
+                        letter-spacing: -0.5px;
+                    }
+                }
+            }
+        }
+    }//intro-container
+
+    .email-container{
+        padding: 130px 0px 100px;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+
+        .inner{
+            display: flex;
+            justify-content: space-between;
+
+            .email-title-box{
+                margin-left: 50px;
+                text-align: center;
+                transform: translateX(-30%);
+                opacity: 0;
+                transition: 0.5s;
+
+                & > .title{
+                    font-weight: 700;
+                    font-size: 84px;
+                    color: white;
+                }
+
+                & > .text{
+                    font-weight: 500;
+                    font-size: 35px;
+                    color: white;
+                    margin: 80px 0px 70px;
+                    line-height: 1.5;
+                }
+
+                & > a{
+                    font-size: 28px;
+                    color: #fee250;
+                    text-decoration: underline;
+                }
+            }
+
+            .input-container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transform: translateX(30%);
+                opacity: 0;
+                transition: 0.5s;
+                
+                .input-wrapper{
+                    width: 1000px;
+                    display: flex;
+                    gap: 3%;
+                    margin-bottom: 50px;
+
+                    .input-box{
+                        width: 48.3%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 12px;
+
+                        & > label{
+                            font-size: 23px;
+                            color: white;
+                        }
+
+                        & > input{
+                            width: 100%;
+                            height: 70px;
+                            border: none;
+                            border-radius: 18px;
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 23px;
+                            text-indent: 20px;
+                        }
+                    }
+                }
+
+                & > textarea{
+                    width: 100%;
+                    height: 420px;
+                    border: none;
+                    border-radius: 18px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 23px;
+                    text-indent: 20px;
+                    padding: 20px 0px;
+                    box-sizing: border-box;
+                    resize: none;
+                }
+
+                & > button{
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 28px;
+                    color: white;
+                    background: none;
+                    border: solid 2px white;
+                    border-radius: 50px;
+                    padding: 10px 50px;
+                    box-sizing: border-box;
+                    margin-top: 80px;
+                    transition: 0.5s;
+                    cursor: pointer;
+
+                    &:hover{
+                        color: $black;
+                        background-color: white;
+                    }
+                }
+            }
+        }
+        .top-btn{
+            position: absolute;
+            right: 55px;
+            bottom: 0px;
+            width: 56px;
+            height: 56px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            & > img{
+                width: 70%;
+            }
+        }
+    }//email-container
 }
 
 

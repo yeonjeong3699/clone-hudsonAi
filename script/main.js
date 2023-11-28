@@ -8,10 +8,16 @@ window.addEventListener('scroll', function () {
     const seenchroLineBox = document.querySelector('.seenchro-line-box');
     const seenchroLine = document.querySelector('.seenchro-line');
     const textBottom = document.querySelector('.text-bottom');
+    const aiTechContainer = document.querySelector('.ai-tech-container');
     const contentWrapper = document.querySelector('.content-wrapper');
     const content01 = document.querySelector('.content01');
     const content02 = document.querySelector('.content02');
     const content03 = document.querySelector('.content03');
+    const introBox01 = document.querySelector('.intro-box01');
+    const introBox02 = document.querySelector('.intro-box02');
+    const emailTitleBox = document.querySelector('.email-title-box');
+    const inputContainer = document.querySelector('.input-container');
+
 
 
     console.log(scrollY);
@@ -149,6 +155,7 @@ window.addEventListener('scroll', function () {
         contentWrapper.style.top = '158px';
         contentWrapper.style.left = '50%';
         contentWrapper.style.transform = 'translateX(-50%)';
+        aiTechContainer.style.marginBottom = '3000px';
     }
 
     if (scrollY <= 5199) {
@@ -156,6 +163,7 @@ window.addEventListener('scroll', function () {
         contentWrapper.style.top = '';
         contentWrapper.style.left = '';
         contentWrapper.style.transform = '';
+        aiTechContainer.style.marginBottom = '';
     }
 
     if (scrollY >= 5300) {
@@ -219,12 +227,31 @@ window.addEventListener('scroll', function () {
         contentWrapper.style.left = '';
         contentWrapper.style.transform = '';
         contentWrapper.style.marginTop = '3262px';
+        aiTechContainer.style.marginBottom = '';
     }
 
     if (scrollY <= 8099) {
         contentWrapper.style.marginTop = '';
     }
+
+    if (scrollY >= 8800) {
+        introBox01.style.paddingTop = '0px'
+        introBox01.style.opacity = '1'
+    }
+
+    if (scrollY >= 9300) {
+        introBox02.style.paddingTop = '0px'
+        introBox02.style.opacity = '1'
+    }
+
+    if (scrollY >= 10100) {
+        emailTitleBox.style.transform = 'translateX(0%)'
+        emailTitleBox.style.opacity = '1'
+        inputContainer.style.transform = 'translateX(0%)'
+        inputContainer.style.opacity = '1'
+    }
 })
+
 
 //animation-wrapper
 const hudsonImg01 = document.querySelector('.hudson-img01');
@@ -270,3 +297,11 @@ document.querySelector('#hudsonImg03Clone').style.left = hudsonImg03.offsetWidth
 
 hudsonImg03.classList.add('original');
 hudsonImg03Clone.classList.add('clone');
+
+
+//email-container
+const topBtn = document.querySelector('.top-btn');
+
+topBtn.addEventListener('click', function () {
+    window.scrollTo(0, 0);
+})
