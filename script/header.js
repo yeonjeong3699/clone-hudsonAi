@@ -14,6 +14,7 @@ menuBtn.addEventListener('click', function () {
 window.addEventListener('scroll', function(){
     const scrollY = window.scrollY;
     const h1Img = document.querySelector('h1 > a > img');
+    const menuBoxList = document.querySelectorAll('.menu-box > li > a');
 
     if(scrollY <= 9399){
         h1Img.style.filter ='';
@@ -23,6 +24,11 @@ window.addEventListener('scroll', function(){
     if(scrollY >= 9400){
         h1Img.style.filter ='brightness(20%)';
         menuBtn.style.filter ='brightness(20%)';
+
+        menuBoxList.forEach((item)=>{
+            item.style.filter ='brightness(20%)';
+        })
+        
     }
 
     if(scrollY >= 10400){
